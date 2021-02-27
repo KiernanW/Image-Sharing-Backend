@@ -8,7 +8,7 @@ namespace imagesharing
 {
     public static class LoginHelper
     {
-        const string DBNAME = @"C:\Work\Comp 4580 Security\Leaky_github\image_site_backend\baddb.json";
+        const string DBNAME = @"C:\home\site\wwwroot\baddb.json";
         private static List<User> LoadDB(){
             return JsonConvert.DeserializeObject<List<User>>(File.ReadAllText(DBNAME));
         }
@@ -19,6 +19,8 @@ namespace imagesharing
             option.Expires = DateTime.Now.AddMinutes(5);
             //// Make the cookie available for the browser
             option.HttpOnly = true;
+            option.SameSite = SameSiteMode.None;
+            option.Secure = true;
             //// A little non logical way to actually get the HttpResponse (from the HttpRequest and its HttpContext)
             req.HttpContext.Response.Cookies.Append("MyCookie", "MyValue", option);
         }
