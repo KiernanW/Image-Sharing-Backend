@@ -18,7 +18,7 @@ namespace imagesharing
         {
 
             var cookieValue = req.Cookies["MyCookie"];
-            log.LogInformation(cookieValue.ToString());
+            log.LogInformation(cookieValue);
 
             Image theImage = Image.FromFile(@"C:\home\site\wwwroot/antlion.bmp");
 
