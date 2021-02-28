@@ -20,7 +20,7 @@ namespace imagesharing
             var cookieValue = req.Cookies["MyCookie"];
             log.LogInformation(req.Cookies.ToString());
 
-            Image theImage = Image.FromFile("C:/Work/Comp 4580 Security/Leaky_github/image_site_backend/images/antlion.bmp");
+            Image theImage = Image.FromFile(@"C:\home\site\wwwroot/antlion.bmp");
 
             if (cookieValue != "MyValue"){
                 return new BadRequestResult();
