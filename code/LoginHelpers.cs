@@ -17,12 +17,11 @@ namespace imagesharing
         {
             CookieOptions option = new CookieOptions();
             option.Expires = DateTime.Now.AddMinutes(5);
-            //// Make the cookie available for the browser
-            option.HttpOnly = true;
+            // Make the cookie available for the browser
             option.SameSite = SameSiteMode.None;
             option.Secure = true;
             option.Domain = "https://imagesharing.azurewebsites.net";
-            //// A little non logical way to actually get the HttpResponse (from the HttpRequest and its HttpContext)
+            // A little non logical way to actually get the HttpResponse (from the HttpRequest and its HttpContext)
             req.HttpContext.Response.Cookies.Append("MyCookie", "MyValue", option);
         }
 
