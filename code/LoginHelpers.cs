@@ -20,7 +20,6 @@ namespace imagesharing
             // Make the cookie available for the browser
             option.SameSite = SameSiteMode.None;
             option.Secure = true;
-            option.Domain = "https://imagesharing.azurewebsites.net";
             // A little non logical way to actually get the HttpResponse (from the HttpRequest and its HttpContext)
             req.HttpContext.Response.Cookies.Append("MyCookie", "MyValue", option);
         }
