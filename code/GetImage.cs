@@ -5,6 +5,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Drawing;
+using System.IO;
 
 namespace imagesharing
 {
@@ -16,7 +17,8 @@ namespace imagesharing
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-
+            string path = Directory.GetCurrentDirectory();
+            log.LogInformation(path.ToString());
             var cookieValue = req.Cookies["MyCookie"];
             log.LogInformation(cookieValue);
 
