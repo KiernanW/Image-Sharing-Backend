@@ -12,7 +12,7 @@ namespace imagesharing
 
     public static class Website
     {
-        const string siteLoc = @"C:\Work\Comp 4580 Security\Leaky_github\image-sharing-site\dist\";
+        const string siteLoc = @"C:\home\site\wwwroot\site\";
 
         [FunctionName("Website")]
         public static async Task<IActionResult> Run(
