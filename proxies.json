@@ -4,9 +4,23 @@
         "proxy1": {
             "matchCondition": {
                 "methods": [ "GET" ],
-                "route": "/Website/{test}"
+                "route": "/Website/{index}"
             },
-            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={test}"
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={index}"
+        },
+        "proxy2": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/Website/js/{file}"
+            },
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={file}"
+        },
+        "proxy3": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/Website/css/{file}"
+            },
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={file}"
         }
     }
 }
