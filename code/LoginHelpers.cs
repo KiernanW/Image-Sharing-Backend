@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-
+//<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>image-sharing-site</title><link href="/css/app.ad97253f.css" rel="preload" as="style"><link href="/Website/js/app.9892dd45.js" rel="preload" as="script"><link href="/Website/js/chunk-vendors.e9bd47a9.js" rel="preload" as="script"><link href="/Website/css/app.ad97253f.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but image-sharing-site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/Website/js/chunk-vendors.e9bd47a9.js"></script><script src="/Website/js/app.9892dd45.js"></script></body></html>
 namespace imagesharing
 {
     public static class LoginHelper

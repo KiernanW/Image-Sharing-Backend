@@ -4,9 +4,9 @@
         "proxy1": {
             "matchCondition": {
                 "methods": [ "GET" ],
-                "route": "/Website"
+                "route": "/Website/{test}"
             },
-            "backendUri": "https://imagesharing.azurewebsites.net/api/Website"
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={test}"
         }
     }
 }
