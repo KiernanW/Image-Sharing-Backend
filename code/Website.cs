@@ -12,22 +12,24 @@ namespace imagesharing
 
     public static class Website
     {
-        const string siteLoc = @"C:\home\site\wwwroot\site\";
+        const string siteLoc = @"C:\Work\Comp 4580 Security\Leaky_github\image-sharing-site\dist\";
 
         [FunctionName("Website")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
             string filePath = req.Query["filePath"];
 
-            string fullFilePath = filePath + siteLoc;
+            string fullFilePath = siteLoc + filePath;
 
             FileStream theFile = File.Open(fullFilePath, FileMode.Open, FileAccess.Read);
 
-            return new FileContentResult(Website.ReadFully(theFile), "application/octet-stream") {
-                FileDownloadName = "Export.csv"
-            };
+            byte[] returnVal = Website.ReadFully(theFile);
+
+            theFile.Close();
+
+            return new FileContentResult(returnVal, "text/html");
         }
 
         public static byte[] ReadFully(Stream input)
