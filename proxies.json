@@ -13,14 +13,14 @@
                 "methods": [ "GET" ],
                 "route": "/Website/js/{file}"
             },
-            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={file}"
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath=js/{file}"
         },
         "proxy3": {
             "matchCondition": {
                 "methods": [ "GET" ],
                 "route": "/Website/css/{file}"
             },
-            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath={file}"
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath=css/{file}"
         }
     }
 }
