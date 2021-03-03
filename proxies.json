@@ -20,7 +20,10 @@
                 "methods": [ "GET" ],
                 "route": "/Website/css/{file}"
             },
-            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath=css/{file}"
+            "backendUri": "https://imagesharing.azurewebsites.net/api/Website?filePath=css/{file}",
+            "responseOverrides": {
+                "response.headers.Content-Type": "text/css"
+            }
         }
     }
 }
